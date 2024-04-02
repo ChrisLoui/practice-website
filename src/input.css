@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.w-med{
+    width: 35rem;
+}
+
+.h-med{
+    height: 35rem;
+}
+
+.w-big{
+    width: 48rem;
+}
+
+.h-big{
+    height: 48rem;
+}
+
+.contained{
+  padding-top: 20vh;
+  height: 20rem;
+}
+
+.drop{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  transform-origin: bottom;
+  animation: rain 1s linear infinite;
+}
+
+@keyframes rain {
+ 
+    0% {
+      transform: translateY(0) scaleY(1)
+    }
+    70% {
+      transform: translateY(100vh) scaleY(1)
+    }
+    80% {
+      transform: translateY(100vh) scaleY(0.2)
+    }
+    100% {
+      transform: translateY(100vh) scaleY(0.2) scaleX(15)
+    }
+}
+
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.mobile-menu {
+  transition: transform 0.2s ease;
+  transform: translateY(-100%);
+}
+
+.active{
+  transform: translateY(0);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#myImage {
+    transition: opacity 0.5s ease;
+    opacity: 1; 
+}
+
+.dark-mode {
+  transition: ease;
+  background-color: 	#87CEEB;
+  color: #fff;
+}
